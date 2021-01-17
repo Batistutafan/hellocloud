@@ -5,5 +5,9 @@ spring:
     name: product-service
 eureka:
   client:
+    region: beijing
+    availability-zones:
+      beijing: zone1,zone2
     service-url:
-      defaultZone: http://peer1:8880/eureka/,http://peer2:8881/eureka/
+      zone1: http://peer1:8880/eureka/
+      zone2: http://peer2:8881/eureka/
